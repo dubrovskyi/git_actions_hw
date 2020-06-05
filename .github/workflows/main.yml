@@ -32,15 +32,8 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
         
-    # Install all of the dependencies
-    - name: Install all of the dependencies
+    # Run docker container
+    - name: Run docker container
       run: |
-        apt-get install python3-venv
-        python3 -m venv venv
-        source venv/bin/activate
-        pip install -r requirements.txt
-        
-    # Run pytest tests
-    - name: run pytest tests
-      run: pytest test_hello_world.py
-    
+        docker build helloworlda/githubactionshw .
+        docker run --rm helloworlda/githubactionshw 
