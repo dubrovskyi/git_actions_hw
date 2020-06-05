@@ -35,5 +35,5 @@ jobs:
     # Run docker container
     - name: Run docker container
       run: |
-        docker build helloworlda/githubactionshw .
+        docker build -t helloworlda/githubactionshw .
         docker run --rm helloworlda/githubactionshw 
