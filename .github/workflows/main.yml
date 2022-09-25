@@ -40,7 +40,13 @@ jobs:
         key: ${{ secrets.SSHKEY }}
         port: ${{ secrets.PORT }}
         script: |
+          echo "### Move to directory speaking2"
           cd speaking2
+          
+          echo "### Git pull"
+          git pull
+          
+          echo "### Docker build and run"
           docker build -t smth/one .
           docker run -d smth/one 
 
