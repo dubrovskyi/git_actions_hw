@@ -39,4 +39,8 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSHKEY }}
         port: ${{ secrets.PORT }}
-        script: docker run -d -p 80:80 docker/getting-started
+        script: |
+          cd speaking2
+          docker build -t smth/one
+          docker run smth/one
+
