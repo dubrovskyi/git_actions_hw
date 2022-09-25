@@ -41,6 +41,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd speaking2
-          docker build -t smth/one
+          docker build -t smth/one .
           docker run smth/one
 
