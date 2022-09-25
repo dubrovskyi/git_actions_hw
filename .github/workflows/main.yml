@@ -42,5 +42,5 @@ jobs:
         script: |
           cd speaking2
           docker build -t smth/one .
-          docker run smth/one
+          docker run -d smth/one 
 
