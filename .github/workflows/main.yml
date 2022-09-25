@@ -32,8 +32,11 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
         
-    # Run docker container
-    - name: Run docker container
-      run: |
-        docker build -t helloworlda/githubactionshw .
-        docker run --rm helloworlda/githubactionshw 
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSHKEY }}
+        port: ${{ secrets.PORT }}
+        script: whoami
