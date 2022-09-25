@@ -39,4 +39,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSHKEY }}
         port: ${{ secrets.PORT }}
-        script: touch 123
+        script: docker run -d -p 80:80 docker/getting-started
