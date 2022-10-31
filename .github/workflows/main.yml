@@ -33,10 +33,4 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           echo "### Move to directory /root/store/astore"
-          cd /root/store/astore
-          
-          echo "### Git pull"
-          git pull
-          
-          echo "### Docker-compose build"
-          docker-compose up -d --build
+          touch 22222222
